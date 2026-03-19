@@ -29,11 +29,16 @@
       overflow: hidden;
     }
 
-    #particles-canvas {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-    }
+   .hero-banner-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url('assets/images/banner.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  filter: brightness(0.35);
+}
 
     .hero-content {
       position: relative;
@@ -354,7 +359,7 @@
 
   <!-- ── Hero ── -->
   <section id="hero">
-    <canvas id="particles-canvas"></canvas>
+   <div class="hero-banner-bg"></div>
     <!-- Profile Image -->
     <div class="hero-image-wrap">
       <div class="hero-image-ring">
@@ -516,79 +521,6 @@
 
 <!-- ─── Vendor JS ─── -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
-<!-- ─── Particles ─── -->
-<script>
-(function() {
-  const canvas = document.getElementById('particles-canvas');
-  const ctx = canvas.getContext('2d');
-  let particles = [];
-  let W, H;
-
-  function resize() {
-    W = canvas.width  = canvas.offsetWidth;
-    H = canvas.height = canvas.offsetHeight;
-  }
-
-  class Particle {
-    constructor() { this.reset(); }
-    reset() {
-      this.x  = Math.random() * W;
-      this.y  = Math.random() * H;
-      this.r  = Math.random() * 1.5 + 0.3;
-      this.vx = (Math.random() - 0.5) * 0.3;
-      this.vy = (Math.random() - 0.5) * 0.3;
-      this.a  = Math.random() * 0.4 + 0.1;
-    }
-    update() {
-      this.x += this.vx;
-      this.y += this.vy;
-      if (this.x < 0 || this.x > W || this.y < 0 || this.y > H) this.reset();
-    }
-    draw() {
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(201, 168, 76, ${this.a})`;
-      ctx.fill();
-    }
-  }
-
-  function init() {
-    resize();
-    particles = Array.from({ length: 80 }, () => new Particle());
-  }
-
-  function drawConnections() {
-    for (let i = 0; i < particles.length; i++) {
-      for (let j = i + 1; j < particles.length; j++) {
-        const dx = particles[i].x - particles[j].x;
-        const dy = particles[i].y - particles[j].y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 120) {
-          ctx.beginPath();
-          ctx.moveTo(particles[i].x, particles[i].y);
-          ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(201, 168, 76, ${0.06 * (1 - dist / 120)})`;
-          ctx.lineWidth = 0.5;
-          ctx.stroke();
-        }
-      }
-    }
-  }
-
-  function animate() {
-    ctx.clearRect(0, 0, W, H);
-    particles.forEach(p => { p.update(); p.draw(); });
-    drawConnections();
-    requestAnimationFrame(animate);
-  }
-
-  window.addEventListener('resize', resize);
-  init();
-  animate();
-})();
-</script>
-
 <!-- ─── Core JS ─── -->
 <script src="assets/js/sidebar.js"></script>
 <script src="assets/js/main.js"></script>
