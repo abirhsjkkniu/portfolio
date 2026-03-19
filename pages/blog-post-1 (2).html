@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>US–Israel–Iran Conflict (2026): Reassessing the Boundaries of International Law — Abir Hossain Shihab</title>
+  <meta name="description" content="A scholarly legal commentary on the 2026 US-Israel-Iran conflict, examining the use of force, self-defence, IHL, and the UN Charter." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/sidebar.css" />
+
+  <style>
+    /* ── Reading Progress Bar ── */
+    #reading-progress {
+      position: fixed;
+      top: 0; left: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-light));
+      z-index: 9999;
+      width: 0%;
+      transition: width 0.1s linear;
+      box-shadow: 0 0 8px var(--accent-dim);
+    }
+
+    /* ── Post Layout ── */
+    .post-wrapper {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 70px 60px 100px;
+    }
+
+    /* ── Post Header ── */
+    .post-header { margin-bottom: 48px; }
+
+    .post-category {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 14px;
+      border: 1px solid var(--accent-dim);
+      border-radius: 20px;
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .post-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--text-primary);
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+
+    .post-subtitle {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--text-secondary);
+      margin-bottom: 28px;
+      line-height: 1.6;
+    }
+
+    .post-meta {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 18px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+
+    .post-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .post-author-avatar {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 1px solid var(--accent-dim);
+      flex-shrink: 0;
+    }
+
+    .post-author-avatar img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .post-author-name {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    .post-author-role {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+
+    .post-meta-item {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* ── Article Body ── */
+    .post-body {
+      font-family: var(--font-body);
+      font-size: 1.08rem;
+      line-height: 1.95;
+      color: var(--text-secondary);
+    }
+
+    .post-body p { margin-bottom: 1.6em; }
+
+    .post-body h2 {
+      font-family: var(--font-display);
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 2.4em 0 0.8em;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .post-body h3 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 1.8em 0 0.6em;
+      font-style: italic;
+    }
+
+    .post-body strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .post-body em { color: var(--accent-light); font-style: italic; }
+
+    /* Pull Quote */
+    .pull-quote {
+      border-left: 3px solid var(--accent);
+      padding: 22px 30px;
+      margin: 2.5em 0;
+      background: rgba(201,168,76,0.05);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--text-primary);
+      line-height: 1.65;
+      position: relative;
+    }
+
+    .pull-quote::before {
+      content: '\201C';
+      font-size: 4rem;
+      color: var(--accent-dim);
+      position: absolute;
+      top: -10px;
+      left: 20px;
+      line-height: 1;
+      font-family: var(--font-display);
+    }
+
+    /* Footnote-style legal citation */
+    .legal-cite {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 12px 16px;
+      margin: 1.2em 0;
+      display: block;
+      letter-spacing: 0.02em;
+    }
+
+    /* Section divider */
+    .post-divider {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin: 3em 0;
+    }
+    .post-divider::before, .post-divider::after {
+      content: ''; flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .post-divider-symbol {
+      font-family: var(--font-display);
+      color: var(--accent-dim);
+      font-size: 1rem;
+    }
+
+    /* ── Post Footer ── */
+    .post-footer {
+      margin-top: 60px;
+      padding-top: 36px;
+      border-top: 1px solid var(--border);
+    }
+
+    .post-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 36px; }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      color: var(--accent);
+      text-decoration: none;
+      text-transform: uppercase;
+      border: 1px solid var(--accent-dim);
+      padding: 10px 22px;
+      border-radius: 4px;
+      transition: all 0.3s var(--ease);
+    }
+    .back-btn:hover {
+      background: rgba(201,168,76,0.08);
+      border-color: var(--accent);
+      color: var(--accent-light);
+    }
+
+    /* ── Disclaimer box ── */
+    .disclaimer {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 20px 24px;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+    .disclaimer strong { color: var(--accent); }
+
+    @media (max-width: 768px) {
+      .post-wrapper { padding: 50px 24px 80px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Reading Progress -->
+<div id="reading-progress"></div>
+
+<div class="sidebar-overlay"></div>
+<button class="sidebar-toggle" aria-label="Toggle menu">
+  <span class="toggle-line"></span><span class="toggle-line"></span><span class="toggle-line"></span>
+</button>
+
+<nav class="sidebar">
+  <div class="sidebar-profile">
+    <div class="profile-avatar" style="padding:0;overflow:hidden;background:none;">
+      <img src="../assets/images/profile.jpg" alt="Abir" style="width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:50%;" />
+    </div>
+    <div class="profile-name">Md. Abir Hossain Shihab</div>
+    <div class="profile-title">LL.M Candidate · Advocate<br>Dhaka Bar Association</div>
+  </div>
+  <ul class="sidebar-nav">
+    <li class="sidebar-nav-section">Navigation</li>
+    <li><a href="../index.html"><span class="nav-icon"><i class="fas fa-home"></i></span> Home</a></li>
+    <li><a href="education.html"><span class="nav-icon"><i class="fas fa-graduation-cap"></i></span> Education</a></li>
+    <li><a href="research.html"><span class="nav-icon"><i class="fas fa-scroll"></i></span> Research</a></li>
+    <li><a href="experience.html"><span class="nav-icon"><i class="fas fa-briefcase"></i></span> Experience</a></li>
+    <li><a href="achievements.html"><span class="nav-icon"><i class="fas fa-trophy"></i></span> Achievements</a></li>
+    <li><a href="skills.html"><span class="nav-icon"><i class="fas fa-layer-group"></i></span> Skills</a></li>
+    <li><a href="activities.html"><span class="nav-icon"><i class="fas fa-users"></i></span> Activities</a></li>
+    <li><a href="blog.html"><span class="nav-icon"><i class="fas fa-feather-alt"></i></span> Blog</a></li>
+    <li><a href="contact.html"><span class="nav-icon"><i class="fas fa-paper-plane"></i></span> Contact</a></li>
+  </ul>
+  <div class="sidebar-footer">
+    <div class="sidebar-social">
+      <a href="mailto:ahossainshihab@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://linkedin.com/in/abirhs" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="tel:+8801726422900"><i class="fas fa-phone"></i></a>
+    </div>
+    <div class="sidebar-credit">© 2025 Md. Abir Hossain Shihab</div>
+  </div>
+</nav>
+
+<div class="main-wrapper">
+<div class="post-wrapper">
+
+  <!-- ── Post Header ── -->
+  <header class="post-header" data-aos="fade-up">
+    <div class="post-category">
+      <i class="fas fa-balance-scale" style="font-size:0.6rem;"></i>
+      Legal Commentary
+    </div>
+
+    <h1 class="post-title">
+      US–Israel–Iran Conflict (2026): Reassessing the Boundaries of International Law
+    </h1>
+
+    <p class="post-subtitle">
+      A scholarly examination of the use of force, self-defence doctrine, humanitarian law obligations,
+      and the crisis of multilateral governance in light of the 2026 Middle East military confrontation.
+    </p>
+
+    <div class="post-meta">
+      <div class="post-author">
+        <div class="post-author-avatar">
+          <img src="../assets/images/profile.jpg" alt="Abir Hossain Shihab" />
+        </div>
+        <div>
+          <div class="post-author-name">Md. Abir Hossain Shihab</div>
+          <div class="post-author-role">LL.M Candidate · Dhaka Bar Association</div>
+        </div>
+      </div>
+      <span class="post-meta-item"><i class="fas fa-calendar-alt"></i> March 2026</span>
+      <span class="post-meta-item"><i class="fas fa-clock"></i> 12 min read</span>
+      <span class="post-meta-item"><i class="fas fa-map-marker-alt"></i> Mymensingh, BD</span>
+    </div>
+  </header>
+
+  <!-- ── Cover Image ── -->
+  <div data-aos="fade-up" data-aos-delay="80" style="margin-bottom:48px; border-radius:14px; overflow:hidden; border:1px solid var(--border); position:relative;">
+    <img
+      src="../assets/images/blog-post-1-cover.jpg"
+      alt="US–Israel–Iran Conflict 2026 — International Law"
+      style="width:100%; height:auto; display:block; filter:brightness(0.92) contrast(1.05);"
+    />
+    <div style="position:absolute; bottom:0; left:0; right:0; padding:14px 20px; background:linear-gradient(to top, rgba(7,7,15,0.85), transparent); font-family:var(--font-mono); font-size:0.62rem; letter-spacing:0.15em; color:rgba(236,232,224,0.6); text-transform:uppercase;">
+      Illustration: Scales of Justice &middot; UN &middot; ICC &middot; 2026 Conflict
+    </div>
+  </div>
+
+  <!-- ── Post Body ── -->
+  <article class="post-body" data-aos="fade-up" data-aos-delay="100">
+
+    <p>
+      The military confrontation that unfolded in early 2026 between the United States, Israel,
+      and Iran has thrust fundamental questions of international law into the global spotlight
+      with unprecedented urgency. From the legality of pre-emptive strikes to the invocation
+      of self-defence under Article 51 of the UN Charter, from the protection of civilian
+      infrastructure under the Geneva Conventions to the humanitarian law obligations of
+      belligerent parties — this conflict compels international lawyers, scholars, and
+      policymakers to confront the most contested boundaries of the contemporary legal order.
+    </p>
+
+    <p>
+      Writing as an international law scholar whose research engages with humanitarian law
+      and human rights frameworks, I offer in this essay a critical legal analysis of the
+      principal questions raised by the 2026 conflict. This is not an exercise in political
+      partisanship but in legal accountability — a domain that transcends national allegiances
+      and demands principled application of established norms.
+    </p>
+
+    <div class="pull-quote">
+      When the drums of war drown out the voice of law, the responsibility of the jurist is
+      not to be silent — it is to speak with greater precision and greater courage.
+    </div>
+
+    <!-- Section 1 -->
+    <h2>I. The Legal Framework: Use of Force in the Post-Charter Era</h2>
+
+    <p>
+      The foundational prohibition on the use of force in international relations is enshrined
+      in Article 2(4) of the United Nations Charter, which obliges all member states to refrain
+      from the threat or use of force against the territorial integrity or political independence
+      of any state. This prohibition, now widely regarded as a peremptory norm of international
+      law (<em>jus cogens</em>), admits of only two recognised exceptions: the authorisation of force
+      by the UN Security Council under Chapter VII, and the inherent right of individual or
+      collective self-defence under Article 51.
+    </p>
+
+    <p>
+      The 2026 confrontation has stretched both exceptions to their analytical limits. The
+      United States and Israel have invoked Article 51 to justify their military operations
+      against Iranian targets, characterising them as acts of self-defence in response to
+      Iran's support for proxy military groups and, more specifically, its alleged imminent
+      nuclear weapons programme. Iran, in turn, has characterised the strikes as unlawful
+      acts of aggression, invoking its own right to respond in kind.
+    </p>
+
+    <span class="legal-cite">
+      UN Charter, Art. 2(4): "All Members shall refrain in their international relations from the
+      threat or use of force against the territorial integrity or political independence of any state..."
+    </span>
+
+    <h3>The Pre-emptive Strike Doctrine</h3>
+
+    <p>
+      Central to the legal debate is the question of pre-emptive self-defence. Classical
+      international law, as articulated in the <em>Caroline</em> case of 1837 and subsequently
+      incorporated into the UN Charter framework, permits anticipatory self-defence only where
+      the threat is <strong>imminent, overwhelming, and leaves no choice of means and no moment
+      for deliberation</strong>. This standard — the <em>Caroline</em> test — has been subjected
+      to considerable expansion in post-9/11 doctrine, most notably in the United States'
+      2002 National Security Strategy, which articulated a doctrine of preventive war against
+      states developing weapons of mass destruction.
+    </p>
+
+    <p>
+      The 2026 strikes on Iranian nuclear facilities cannot be readily justified under the
+      traditional <em>Caroline</em> threshold. Iran's nuclear programme, while intensified,
+      had not yet produced weaponised capability, and diplomatic avenues — including the
+      moribund Joint Comprehensive Plan of Action (JCPOA) framework — had not been
+      exhausted. Invoking anticipatory self-defence against a potential future capability,
+      rather than an imminent attack, represents a significant departure from established
+      legal doctrine and risks setting a precedent that could be weaponised by any state
+      seeking to justify aggressive military action.
+    </p>
+
+    <div class="pull-quote">
+      The Caroline test remains the cornerstone of anticipatory self-defence. Its erosion
+      does not strengthen states — it dissolves the legal constraint that protects them all.
+    </div>
+
+    <!-- Section 2 -->
+    <h2>II. International Humanitarian Law: The Protection of Civilians and Infrastructure</h2>
+
+    <p>
+      Regardless of the legality of the decision to resort to force, all parties to the
+      2026 conflict are bound by International Humanitarian Law (IHL) — specifically
+      the Geneva Conventions of 1949 and their Additional Protocols, as well as customary
+      international law. The core principles of IHL — <strong>distinction, proportionality,
+      and precaution</strong> — impose strict obligations on belligerent parties that cannot
+      be waived by strategic necessity.
+    </p>
+
+    <h3>The Principle of Distinction</h3>
+
+    <p>
+      The principle of distinction, codified in Article 48 of Additional Protocol I,
+      requires parties to a conflict to distinguish at all times between civilian objects
+      and military objectives and to direct attacks only against military objectives.
+      Reports emerging from the 2026 conflict raise serious questions about compliance
+      with this principle on multiple sides. Strikes on dual-use infrastructure — power
+      grids, communications networks, water treatment facilities — implicate the prohibition
+      under Article 54 of Additional Protocol I on attacking objects indispensable to the
+      survival of the civilian population.
+    </p>
+
+    <span class="legal-cite">
+      Additional Protocol I, Art. 51(5)(b): An attack is disproportionate if it may be expected
+      to cause incidental loss of civilian life... excessive in relation to the concrete and direct
+      military advantage anticipated.
+    </span>
+
+    <h3>Proportionality and the Fog of Legality</h3>
+
+    <p>
+      The proportionality assessment — requiring that collateral civilian harm not be excessive
+      in relation to the anticipated military advantage — has never been a mathematically
+      precise exercise. Military commanders and legal advisers operate under conditions of
+      uncertainty, and IHL accommodates this to a degree. However, the 2026 conflict has
+      produced casualty figures and infrastructure damage that demand rigorous post-hoc
+      assessment by independent international mechanisms, including the relevant UN Special
+      Rapporteurs and the International Committee of the Red Cross (ICRC).
+    </p>
+
+    <p>
+      Of particular concern is the reported use of airstrikes in densely populated urban
+      areas. IHL demands that in such circumstances parties take all feasible precautions
+      to minimise civilian harm — including advance warning, targeting review, and
+      suspension of attack where civilian harm would be excessive. Evidence of systematic
+      disregard for these obligations would constitute war crimes under the Rome Statute
+      of the International Criminal Court.
+    </p>
+
+    <!-- Section 3 -->
+    <h2>III. The UN Security Council and the Crisis of Collective Security</h2>
+
+    <p>
+      The 2026 conflict has once again exposed the structural paralysis of the UN Security
+      Council as the primary institution of collective security. With the United States
+      exercising its veto power to shield itself and its ally Israel from binding Council
+      resolutions, and Russia and China deploying their vetoes to prevent condemnation of
+      Iran, the Council has been rendered functionally impotent at the precise moment of
+      its greatest relevance.
+    </p>
+
+    <p>
+      This is not a new phenomenon — the Council's veto architecture has long been
+      criticised as a Cold War relic incompatible with the demands of twenty-first century
+      multilateralism. The 2022 Russian invasion of Ukraine and now the 2026 Middle East
+      conflict have accelerated calls for reform, including restrictions on the use of
+      the veto in situations involving mass atrocities, as proposed by the Accountability,
+      Coherence and Transparency (ACT) group.
+    </p>
+
+    <div class="pull-quote">
+      A Security Council that cannot act is not merely a failure of diplomacy — it is a
+      failure of the international legal order itself, and the consequences fall disproportionately
+      upon those least able to bear them.
+    </div>
+
+    <p>
+      In the absence of Council action, the General Assembly has convened Emergency Special
+      Sessions under the Uniting for Peace resolution procedure — a mechanism first deployed
+      during the Korean War. While General Assembly resolutions are not legally binding,
+      they carry significant political and moral weight and serve as evidence of the
+      <em>opinio juris</em> of the international community. The resolutions adopted during
+      the 2026 crisis, calling for an immediate ceasefire and humanitarian access, represent
+      an important articulation of collective legal conscience even where enforcement
+      mechanisms remain absent.
+    </p>
+
+    <!-- Section 4 -->
+    <h2>IV. Nuclear Law and the Non-Proliferation Regime</h2>
+
+    <p>
+      The 2026 conflict has placed the nuclear non-proliferation regime under extraordinary
+      strain. Iran's acceleration of its uranium enrichment programme — reportedly achieving
+      weapons-grade enrichment levels — has been cited as the proximate cause of Israeli
+      military action. This raises profound questions under the Treaty on the
+      Non-Proliferation of Nuclear Weapons (NPT) and customary international law governing
+      the use and threat of nuclear weapons.
+    </p>
+
+    <p>
+      Iran, as a signatory to the NPT, remains legally bound by Article II's prohibition
+      on the manufacture or acquisition of nuclear weapons. The IAEA's increasingly limited
+      inspection access, documented in a series of Board of Governors reports since 2023,
+      has created an epistemic crisis in which the international community cannot verify
+      with confidence the nature and extent of Iran's nuclear activities. This verification
+      gap is itself a legal problem — the NPT's safeguards system, administered through
+      IAEA Comprehensive Safeguards Agreements, is the treaty's primary compliance mechanism,
+      and its erosion undermines the entire non-proliferation architecture.
+    </p>
+
+    <span class="legal-cite">
+      NPT, Art. II: "Each non-nuclear-weapon State Party... undertakes not to manufacture
+      or otherwise acquire nuclear weapons or other nuclear explosive devices..."
+    </span>
+
+    <p>
+      At the same time, the ICJ's Advisory Opinion in <em>Legality of the Threat or Use
+      of Nuclear Weapons</em> (1996) remains the authoritative statement of the law: the
+      threat or use of nuclear weapons is generally contrary to the rules of international
+      law applicable in armed conflict. States that have issued implicit nuclear threats
+      during the 2026 crisis — including through strategic ambiguity — must be held to
+      account under this framework.
+    </p>
+
+    <!-- Section 5 -->
+    <h2>V. Humanitarian Consequences and the Responsibility to Protect</h2>
+
+    <p>
+      Beyond the strictly legal dimensions of the conflict, the humanitarian consequences
+      for civilian populations — in Iran, in Gaza, and across the wider region — demand
+      engagement with the Responsibility to Protect (R2P) doctrine, endorsed by the 2005
+      World Summit Outcome. R2P establishes that where a state manifestly fails to protect
+      its population from genocide, war crimes, ethnic cleansing, or crimes against
+      humanity, the international community has a responsibility to act through peaceful
+      means and, as a last resort, coercive measures authorised by the Security Council.
+    </p>
+
+    <p>
+      The practical application of R2P has always been contested, and the 2026 conflict
+      does not lend itself to simple categorisation. What is unambiguous, however, is that
+      the civilian populations caught in the crossfire of great-power and regional rivalry
+      possess rights — under IHL, international human rights law, and international refugee
+      law — that are not suspended by the strategic calculations of belligerent states.
+      The displacement of civilian populations, the denial of humanitarian access, and the
+      destruction of civilian infrastructure all warrant immediate attention from the
+      international community and the relevant treaty bodies.
+    </p>
+
+    <!-- Section 6 -->
+    <h2>VI. Conclusion: International Law at a Crossroads</h2>
+
+    <p>
+      The 2026 US–Israel–Iran conflict is not merely a geopolitical crisis — it is a stress
+      test of the international legal order as we know it. The questions it raises — about
+      the limits of self-defence, the content of IHL obligations, the functionality of
+      the Security Council, the integrity of the non-proliferation regime, and the
+      protection of civilian populations — are among the most fundamental in the history
+      of international law.
+    </p>
+
+    <p>
+      The answers are not always clear, and intellectual honesty requires acknowledging
+      the genuine legal ambiguities that pervade this conflict. Pre-emptive self-defence
+      doctrine has evolved, its edges remain contested, and reasonable international
+      lawyers disagree. Proportionality assessments are inherently contextual and
+      fact-specific. The Security Council's veto architecture, whatever its deficiencies,
+      reflects the political realities of 1945 that have not yet been reformed away.
+    </p>
+
+    <p>
+      What is not ambiguous is the fundamental importance of the legal framework itself.
+      International law is not a naive idealism — it is the most sophisticated mechanism
+      humanity has developed for regulating the behaviour of states and protecting the
+      dignity of persons caught in the machinery of power. Its erosion does not produce
+      freedom — it produces impunity.
+    </p>
+
+    <div class="pull-quote">
+      International law does not fail when it is violated — it fails when the violation
+      goes unnamed, unanalysed, and unaccountable. The jurist's task, above all, is to
+      ensure that it does not.
+    </div>
+
+    <p>
+      As scholars of international law, our responsibility in moments such as this is to
+      speak clearly, to reason rigorously, and to resist the temptation — on all sides —
+      to subordinate legal principle to political convenience. The civilians of Iran, Israel,
+      and the wider region who bear the cost of this conflict deserve nothing less.
+    </p>
+
+    <div class="post-divider"><div class="post-divider-symbol">✦</div></div>
+
+    <p style="font-style:italic; color: var(--text-muted); font-size:0.92rem;">
+      <strong style="color:var(--accent);">Key Legal Instruments Referenced:</strong>
+      UN Charter (1945) · Geneva Conventions (1949) & Additional Protocols ·
+      Treaty on the Non-Proliferation of Nuclear Weapons (1968) ·
+      Rome Statute of the International Criminal Court (1998) ·
+      ICJ Advisory Opinion on Nuclear Weapons (1996) ·
+      2005 World Summit Outcome Document (R2P) ·
+      <em>Caroline</em> Case (1837) · Additional Protocol I, Arts. 48, 51, 54
+    </p>
+
+  </article>
+
+  <!-- ── Post Footer ── -->
+  <footer class="post-footer" data-aos="fade-up">
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This blog post represents the author's independent
+      scholarly analysis and legal commentary. It does not constitute legal advice and
+      does not represent the position of any institution, organisation, or employer.
+      The views expressed are the author's own, formed through engagement with
+      publicly available legal instruments, academic literature, and reported facts.
+    </div>
+
+    <div class="section-label" style="margin-bottom:12px;">Tags</div>
+    <div class="post-tags">
+      <span class="badge-luxe">International Law</span>
+      <span class="badge-luxe">Use of Force</span>
+      <span class="badge-luxe">Self-Defence</span>
+      <span class="badge-luxe">IHL</span>
+      <span class="badge-luxe">UN Charter</span>
+      <span class="badge-luxe">Non-Proliferation</span>
+      <span class="badge-luxe">Humanitarian Law</span>
+      <span class="badge-luxe">Security Council</span>
+      <span class="badge-luxe">R2P</span>
+      <span class="badge-luxe">Middle East</span>
+    </div>
+
+    <a href="blog.html" class="back-btn">
+      <i class="fas fa-arrow-left" style="font-size:0.6rem;"></i> Back to Blog
+    </a>
+
+  </footer>
+
+</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="../assets/js/sidebar.js"></script>
+<script src="../assets/js/main.js"></script>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const el = document.getElementById('reading-progress');
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = (window.scrollY / docHeight) * 100;
+    el.style.width = Math.min(pct, 100) + '%';
+  });
+</script>
+
+</body>
+</html>
