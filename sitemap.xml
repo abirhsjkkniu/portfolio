@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Home -->
+  <url>
+    <loc>https://abirhsjkkniu.github.io/portfolio/</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Education -->
+  <url>
+    <loc>https://abirhsjkkniu.github.io/portfolio/pages/education.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Research -->
+  <url>
+    <loc>https://abirhsjkkniu.github.io/portfolio/pages/research.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Experience -->
+  <url>
+    <loc>https://abirhsjkkniu.github.io/portfolio/pages/experience.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Achievements -->
+  <url>
+    <loc>https://abirhsjkkniu.github.io/portfolio/pages/achievements.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Skills -->
+  <url>
+    <loc>https://abirhsjkkniu.github.io/portfolio/pages/skills.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Activities -->
+  <url>
+    <loc>https://abirhsjkkniu.github.io/portfolio/pages/activities.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Journal -->
+  <url>
+    <loc>https://abirhsjkkniu.github.io/portfolio/pages/journal.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Blog Post 1 — US-Israel-Iran Conflict -->
+  <url>
+    <loc>https://abirhsjkkniu.github.io/portfolio/pages/blog-post-1.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://abirhsjkkniu.github.io/portfolio/pages/contact.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>
